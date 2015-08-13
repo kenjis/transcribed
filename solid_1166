@@ -1,0 +1,400 @@
+
+c Chris Klues is an adrenarin loving software developer from sweden.
+He started to code professionally at the age of 20, until he find the way to pay the bills to get into the school you wanted and then became an art director
+15 yers later he still coding he even travelling around the world talkign about software development
+There still other plans in his life when he grows up, but it is isn't art director stuff anymore.
+h jajaja
+
+c welcomd chris
+h thanks
+c grate picture bythe way
+h thank you it's a bit different aI know
+c it's diffinately different but I gues s your personality comes through that loud clear
+h yeah, potentially.
+c yeah
+so, bob martin SOLID. I guess hte michel fathers coin that solid acrynum to name that first 5 principle that uncle bob layout for us
+yeah, tell us your exprienct so.. first of all we go thorugh the principle and eveything and what's your thoughts are on hte all of it by
+first of all, what do you think abouthe comment and the Richar'ds response to it?
+h: I liked the response, I hear a lot about the software craftmanship, all of that I am gonna flame but I know SOLID iknow it,
+I think some poepl should get off the highball, instead of horses, I actually believe that shipping software is hte featuer to, something we should be doing that too.
+c yeah
+h software craftmanship ppl tend to talk about these massive thing all of the hoops you have to go through al of that that take eidiuou to take something yes if you are building simple app, then I don't htink you need all of that. I think sliding scale of how far you need to take staff, and I am not sure you need all of that way all the time to right way to do it.
+c if you are building something that going to century that would be a core application of he enterprise and you gotta 100 ppl working on it by all mean, i think further you break down, small pieces, and not violate the all of principles, better off you gonna be when changes are made. I htink that is what it is SOLID is about future proofing what you know the trying to limit changes to the smallest piece. of the puszzle as possible
+h. yeah, pretty much.
+which is also why when you comes back to I've just said something on my slide scale as well, we talk about all fo the software live on century and how all of change and that I must admit I 've involve on quite a fiew project where client gonna be this gonna be new thing we gonna use this of everything, this gonna run the business and 6 months later they scrapp the project becasue it didn't work. even in those cases I might be more pragmatic in the beginning and get suff out the client and get thos work with it see the actually works, I do believe you can actually introduce a lots of SOLID suff farther down the line if needed.
+c: ok
+such as when changes need to be made.
+h. yeah if yo usee that end up certain thing in raw and you just see that you have actuall proof it will be changed> you can introduce it you cna start split it into smaller pieces but once again I am pretty pragmatic to do the way I do it .
+c: all right then let's ah, shall we og throug htme and get your take on them?
+h: sure.
+
+0:11:31.9'
+c: start with SRP, single responseiblity principle?
+h is the probably the most important one in my mind that's the one everyone most of the princinple you get to used to me
+you started solid principle if you work long enough software development you gonna figure that out a lot.
+and the single responsibility basically ouare just saying there should be only one reason for class to change, and one requirement can change and thus cause change the class. it makes sense, it means you just have smaller piece of code that you maintain then if something changes and requirement changes really easy to figure out what need to be cahgne in the software. it's definately one of the important principle in there I believe.
+c: and the idea is that every class should have just single resposiblity and so you know if you thingk of class has iddonno 2 or 3 method on it, that violate the princple, public method sort of violate the principle itself, so rather thatn having isngle class you take all of those individual responsibility or mthod if you will, and make interface out of them and htne you are able to just simple change one of the without changing eveything, is that prittey much the good the summary?
+
+h: yeah it is. I ugess you kind of take a bit further than s though. S just tell you need to have interface s compositional that, i think it's introduced a bit later on, but in my mind, yes it does mean breaking it down and makins sure that you get the small unit as possible reasonalbly small unit that taking care of change
+0:13:24.4
+r should we set this in the ocntext of talkign c#? what is it look lik in the coding perspective?
+h: from the coding persoepctive, I ony do c# I dont know enything else except for javascript,
+r well then you made the good choice.
+h it just looks like anything else, you can't just look at and say oh this is single resposniblelty and htis is solid, it actually easier to figure out classes not sinble responseiblity, because it start to doing shings liek talking to database.talking to some webservice makeis changes and to the formatting and does validation, and do those extra things,you sort of see that any little change you have goign into that change calss all the time, iti s easier to seeing when you are breaking single responsibility than acatually know that you are single responsible. causes even if you make a class sort of very small you does one thing you can still take it too far,m and actually end up with breaking into 2 small piecses then you have 2 different classes you need to fix just because you need to change just one thing.
+c yeah very good point I am thinking of wpf mvvm that kind of senario you have view model , that is by definition, multi responsibility.
+h that is by definition massive break of single responsibility. in my mind, it kind of if you say often does all things communicate with some webservvice whaever do formating does vaildation, it deifniately break from single responsibility and it's generally break from solid, I don't think there is any othter ywa to do it.
+c I think the implied way is the take this view model and everyt evey single thing it does, you make class for it. and build the interface for it and implement that interface that seem to me to be really overkill.
+h i completely agree. so I have a pretty long background in mvvm. I used to be silverlight mvp, anm focus a lot of mvvm parttern and I really love the patterh, yes it odes break all of thoe srole, but they tend to be sort of befilling it's kind of single responsiblity in the way that it's reponsilble managing whatever goes int ot hte view.
+c yeah
+on the other hand it does a lot os thing, yeah, if you start looking, what can change, of for you to have chagne ah, well, it would be changing it would be changing someint in the view. depenidng on how far you gonna take on single responsiblity. it's probably break, it's still does one thing.
+c and only differencew hwne something change you change a large viewmodel, chanigng one little antser class that hangs off your modele
+in either way you are makign changes and I guess the implecation is that if you change one little class does one little thing, you have less chances of messing up the other code. in the view model.
+h very true.
+b but you know, then again I've been programming for 30 year,s I just don
+t do that,
+me neither. you come back to the prgramatic thing, if you vbuild your viewmodel, and breaking into smlaler pieces, it's becums are hassle to mainttain that software, so to me, just matter of biting the bullet, I will still break down to my view models like a smaller pieces have some composition going ont if it becomes big and complecated, so breaking it down to parts of ui and maybe uses wpf something like prism or multiple view model, and messaging things like that getting ask single responsibiltiy but once again, I ma probably over pragmatic, and I do the view model, and if it becomes teditous to maintain in the future, I"ll break it apart later on.
+0:17:45.9
+ok here is another htought, do you think that single reponsiblity principle probably helpswhneyou have a dynamic language you are less dependant on compiler to tell you what's wrong? and more dependants on test?
+yeah I thinks os, I sure start rreally into refactoring book that sombody wrote, was that martin froid wrote it?
+yeah
+I coudn't even agree with that because so much that refactoring book was about make refactroing safe and all of that with c# compiler will tell us when things are broken in somany cases it makes somuch easier, so ,yes, making changes in viewmodel and making changes in classsese the ocmpiler will actualy tell us a lot then we could normally going to have without compiler telling us. so doing javascript for example, fo a bit different.
+c yeah, I think so.
+oh, I could say something funnyr
+r don't makei fun of javascript! javascript of your friend.
+c I lofve javascitpt, I love javascript programmers all of thme.
+h hahaha
+I've actually moved I do typscriot when i can
+r interesting. is it more c# like?
+h yeah, it's just make more structrued. I actally enjoy visual studio being able to tell me give me propar interllisense, not all of these crappy I just show you whatever I can figure out ever been called in your javascript in your enteire solutions, with typescipt you do get intellisens just make it eveything easier I get statically type stuff which gives me compiler warning and when I do mistakes just add so me form of ridgligity and structure to my code I tend to make less mistake with typscript .
+0:19:50.3
+r yeah I think it's also mindset. right we think whole point of us staticall y typing is lemme know when I mess up typing
+h yeh
+that's I wnnaa know
+h exactly
+r I like taht a lot it's gets bakc to that way of thinkign this is how I think about programming and htis is what I expect to tool to suppot me on
+if you think dynamically, then you deal with that probalm in completely different way. I hitnk we only get trouble when we mix up that some ways you violating single responsiblity of your tooling
+h yeah
+
+all light, should we move on, we gos open close proinciple?`
+r Open for extention and closed for modification.
+that seems pretty arbitorary.
+
+It's very general and kind of hard to understand another most people whne I do presetnation of solid i generally as k audience
+if they know or heard of solid principal, and 95 % of the audience put the hands up and then ask if they can name the each principals then you down into 50 percent of all of ht naswer
+and htye ask, then can you explain liscov, all hands disappear except for one of two. 0:20:46.4
+
+but you parfectly honest liscov is not the hardest one to explain open close is the much much harder accoring to me.
+r yeah
+c so beg the question how many professional developers actually foloowing this prrincipals? it doesn't seem like a lot.
+h I think they do a sort of unconciously. basically it comes out of what you are building, but no I conciously following solid principal properly, I met very few people who do and to be parfectly honest
+
+I do started getting interested in this nad talking to a lot of popel arond me, very few people knew all of rprinciple keew how all works.all of the all rules inolve that, no I don't think most of people do follow that.
+
+c all irght, so, ocp, open close principal is as richard said, ah, class should be open for extention but closed for modification, this is software not just a class.
+open for extention but close for modification, in other words, if
+you have login method, and that method now need to change, now you have loging 2 methodl
+
+r hahahah
+h haha, yeah, that's exactly how my code look like
+0:22:08.1
+login1 login2 superlogin another awesome login
+c now you have naother problem. which one I shoudl call?
+h hahaha yeah, I would potentially make it a little bit bigger than the login method, basically saying look at the class that has the loging method??
+c yeah,
+
+h and when you need to make a change you inherit the class and overwrite the log in method....
+
+c yeah, of cause, I've been facetious.
+let's find really good example where violating this principal would be bad.
+
+h oh, I think the , it's hard to come up with the case for it, i gess the, the general idea behind the open close principal is
+
+if you make, and going and change the code, so you say you wanna change te login function, if you going and modify the function and put it in the production, you might actually break something.
+because you introduce new bug to it. if you inharit forom base class and written to the correct way, the ocp way, you are not usppose to be making the modification break existing things, yes? that's a lot easier said than done.
+
+r you just said we tend to follow thing by reflex. there is the reflex we have. you know when you modify, you know the people depending on.
+not break it for htme. you maybe add some paramter and add some functionality but it does the exiting workflow should continue to fucntion.
+
+c right
+
+h it's kinda make it interesting beause sort looking at this, then you star looking arun the unit test? so you run the all of the
+unit test you are sure you won't break anything. and making sure the code broke in the way it should, then you can have the
+regression test. and goingin and change things.
+
+if you start following open close princple and don't modify the code, its quite
+neat. you can more less run your test as you build the class then once the clas is withing the air quotes, "Done" and put it in blood sheet you can actually turn the folder to test, becasue never be in there making change to it?
+
+r "should be" in the operative words,
+h yaaay! i am defintelly saying should, if you strictly follow open close princial, that should be the case, whenever you need to make a change that inharit that , create that class, then you add test to that class, making sure that new features workign in the way the yshould
+
+r this is the oen of those we get into that ocp is, a lot of us just avoid inharitance now because it create whole another set of the problems.
+
+h it does. that's also where we sort of get ocp is like you cna still you can, make changes using depndancy injection, or dependancy inversion, that's one of the hearing ocp was being able to making modify to the implementation by sending other depndancy do other things. and also if you start lokg at you got that idea of ahm, myers versus polymorphic. where myer version says we should have a class we iinharit the class when we need to make a changes.
+
+we should say, we will start from implementation then we inharit the functionality. but potentially modify the interface whereas polymorphic which we asuume
+
+I htink more prevalent today, saying we do that interface and abstract base class and we will implement, inharit or implement from that, which means we will bring the interface with this but implementation will change? so there two different way, I rearely go with myer and use classes inharit classes all of that, whneever going I need to make changes to, it seems easier when we change interface I guess is interface is the most people are using today?
+
+18:08 2015/08/07---------------------------------
+c you know it's a interesting observation.
+that I made cause i am among first people who trained others on dotnet. when ever came out of, I was part of the company called deep training. and we had a contract to go do a roadshow with Microsoft .
+
+all of the country in US teaching dotnet. in especially, even before then object oriented visual basic, ther was theis idea we tought oo, ah, you know iwth cusotmer object or to model the real world. it's all about the model.
+right? we have fruet, then orange is the fruit, inharit from fruit, you know the inheritance model is playing that what I was trying to get at. and probably because inside of the dotnet framework thers a lots of inharitance. and if you are building up the framework, you know you wil have a lots more base classes and lots of things. but if you abuilding a modle of the buisiness, or building a billing system, or or, business layer, you are not necessailyt using all of those that inharitance, and then it relaly comes back and bite you. I've seen many projects, I did see in early 2000, just becaus they over - architected using oo, and found out their models broke down
+
+h I completely agree. I think the oo stuff, is good, but we are kind of using in the different way than people use to ?
+0:27:55.2 as you say I guess the classical example is car, car has doors, which you can inharit car from sports car all of that you say doesn't really work, trying to remodel the real world, software, not really working out according to me, which is why, yes, you do get a less base class and thing like that.
+c and I am guilty of that. I tought my vb master class I tought object oriented programming to vb programmers who hadn't odne object that what I use, because it's easy to under stand remodel of how inharitance works and how collegetion works, all of that staff
+
+that's true, it doesn't work in the real worls
+
+r when we getiing into this conposability appropch , rhater han that, it's inharitance approach which is kind of the probem.
+so why not compose together things you actually need, I think i's method and bunch of other extensibility approrches, which I still think works with opn close principals.
+
+c that's exactly waht s happend. if you listen to the early show of donet loks in 2002 2003, we begin to get away from inherietnace and start talking about composition. incapsulations.
+h I completely agree. that's the way it's kidna turn into being that, whih all the solid principal,
+
+if you start following , and don't do strictly, don't do comporsablility, and you composing things and comvining object.
+
+you end up with thses massibe hirrakiey of tree structure then inharitance becaomse really old hard to work with. So, from presavation pointof view, you probably end updoing composition over inharitance beacause you realize that inharitance won't work long run.
+c right
+c hey rechard?
+r must be that happy time again.
+Chris Klue wanted to have quad or octcompter, for areal photogoraphy
+
+0:35:03.6
+Ok, lets jump bak in here. Liscov substitution principal , lsp, is the one you mentionted most people haven't head of, but it's simple.
+derived class should be parfedtly susbtitutable for hte base class. if d is the derived from a, then d should be the substitute for a , not necessaryly other way around, a doesn't substitute d. right
+h exactly.
+
+The way you put it is just so much simpler to understand, than the specific defintion that you find google liscovs, because it basically says, if provable d of x that would d being this and x being that, then it's really hard to undestand, but pretty much what you said. If you inharit the class, that wilch will do have open close principal. a lot, apparently, you should make usre that class inharited class you get yes you say perfectly subsbitutable. for the parent class.
+
+c that seems pretty obvious to me. when I was doing that a lot of inharitance I don't anymore, that was the way it does. I woulnt ever writhe class otherwise. so, how people violate this principal?
+typicaly?
+
+well perfactly honest there are 4 rules inside of liscov. liscov substitution have 4 rules. 1st one is you can change return type, as long as return type is more specialized than base class, so if you are returning car, your inharited class can sportscar, for example.
+
+c sure
+
+h in coming paramter is otherway around. but that kind of move when it comes to statically typed language like c# because its impossible to chagne the ignatuer of type, when inharited. so we can ignore that one.0:36:57.3
+
+c again its seems llike dynamica language have more requirement for this. than c# does
+r more challenging anyway.
+c yeah. or the solid principal so far anyway, seems help out you as a dynamnic language programmer more.
+
+h so, next one is one I guess is easilest to viloate. adding source strengling precondition, and weaking postcondition?
+
+that's basically making your clas have other precondition than base class. then all the sudden you are method that you are calling requires certain property to be set specific way, that base class didn't have that condition,
+
+so if you add new contion like that, basically, modify the contions to require todo something to do the class that breaking liscov.
+
+and also otherway around, weaking things asically saying when inharited all of the sudden change what you are arllowed to do on the class, so now all the sudden you an't do this what you were allowed to do in the base calss $ that's quite easy to that point,at least adding precondition.
+
+where you areall the sudden saying "so I need to modify this little thing i just inharited I overwrite the method, I make sure that variables are set, in the proper way, which could make sense. it could be a request you need to add the feature. to but you are actually violating the liscov.
+
+0:38:34.9
+if I am making that precondition change. and it could potentiall ruin the perfectly wroking code, in production when you deply it, because hey are used to be using your class without setting htose property and then it's kidn abreaks.
+
+r it's definately feelis like one of those things like this something you do by reflex, but it's incredebly hard to explain.0:38:56.8
+
+h pretty much, yes
+
+r cause, why would you go another way. you know it's always make sense when extend stuff.
+
+h yep if you do open close properly, you make your class open for extention, whih means open for adding things to it not movidying it. you shouldn't really run into that either
+
+r yep, again that's instinct. If I modify this thing, I will break things,
+0:39:25.4
+so extend it.
+
+h you kind get used to it.
+if you've done this few years, you broke things, you are out there "I shouldn't be doing this."
+r all you gonna do is making ppl sad, few times, then it becomes apparentl
+h pretty much , yeah. you get yelled at, few time, then after a while, you'll lean.
+h hahaha
+c feels good whney ou stop.
+r don't do that.
+c all right. 3 or 4, under liscof
+r number 4, interface segregation.
+c did you cover all of that
+h ahhh actually, there is a history constraint, says that you can't make immutable class mutable, and otherway around.
+c inside of liscov
+h which would make sense, ppl think that that's pretty obvious. actually it's not hat ahard to introduce ability to make immutable class to mutable
+by adding other property to affect the other one . so other method and thinglike that. that's 3rd rule.
+actually I can't remember hte last one now.
+
+c. oke, we move on. Interface segragation. yesp
+no client force to implement methods which doesn ot use, and the contract hsould be broken down to thin ones.
+h I like the wya you put it. bause I think the definition I found was no class hsould be dependant on functionality that does not need.
+basically the otherway around. whneever I get the interface
+0:41:10.7
+
+whenever I get the interface I shouldn't get something I am not supposed to be using.
+ah,
+c by the way I am reading my source here is overview of solid principal of c# may 1st 2013 by vns aroon and we will post the link to that. It's codeguru.
+c I like the way he break down to english
+
+h yeah it's very simple. it's basically, don't put bunch of stuff into interface and make the interface really big. Make small ones much easier to implement, much easier to implement to the method than implementing 25 methods. and it's basically make it easy to implement also makes it more fine grain on what you give the client access to. On the other hand, I hate taht argument. I have to say that
+
+r hahahaha
+
+h I keep hearing well, I don't wanna give client code that use this interface accesses too much stuff. it might do the wrong thing. It's like, who is writing the code? in our company, I write the code, and my coworker write the code, we don't have little gnomes comes out at night code in the computers, and misuse our interfaces.
+
+c you know that flashses the first version of the siliverlight came out, there were wories and cooohooo and its baseically wrapper around not implemented exception
+
+h I heard about that, in the microframeworks as well
+
+c so, i am thinking, is that how we do? all of these not implemeing, throwing not implemented exception?
+
+h it tend to turn into that. I change my presentation in the see the littlebit. I added specifica slide about the worst violation I've ever seen of ISP, it's actually from Microsoft.
+it is the membership provider. did you remember in asp.net 2.0 we got membership provider if you wanted to produce your own membership provicer you just inharit provider base class, and you override the method you needed. I have a bunch of situation where I had a I just wanted offer logins, I just wanted to varify a username and password and they are ok or not
+
+c but then you had to override all the other thuings you won't using.
+
+h yeah hter were 27 other things I just throw not implemented exception
+in hte every single ond of them, which is apparently fine, but according to.. since it won't be used, but it feels really wrong to have massive class with 3 implented mthos, and the rest throwing notimpelented exception. and it also single responsibility. in the way that, not only does it veridate username and password, for it, it also makes it is possible to users by id and by email and it's possible to varidate password complexity and , ahm, locking out too many failed ateempt. something like that have all of those thing in there
+
+c and also it comes with all of those things you can't do.
+which thou shallt not. is sometimes works, but sometimes doesn't.
+
+r hahaha
+
+h obvious solution to that is, if you look at isp, then let's break it down, to we have on authentication of users, let's have one interface for manageimeng passwrod complexigy one interface of, so, you have bunch of small interfaces. and when I needed to offer an ablity to using custom back end, I iwll jsut implement that to validate user thingies, if I then wanted to offer the ability to edit the user information which is also part of the membership provider, I would have another inetrface ofthat, it owuld be a lots of hassle. figure all, because the all webconvifation stuff, but it would make sens.
+
+c all right.
+r I still feel like this is just like yeah, experience developers, this is what you do. but it's nce to have written out and then argument buy the very experienced folks, when you talkign to sometone who have built a software, and its violating stuff, then look, because consensous herei is this is mistake.
+
+c but I think, even further than that, when you see problems, you can trace them back to violation of one of these principals. and therfore, you can start fixing stuff in the right way
+
+h but you guys are assumeing old developers smart enaough to reallized that, I just had discussion onlines and I left discussion because it annoied me, but it start talking about liscov they are talkign aobut you know the sample that everyone does liscov is square is not rectangle. having, both the width and heights are the same, while rectangles can have differently, that's one of the obvious example of everyone tlakign about liscov and then the discusion goes start talkign about that. hten the developers goes no thats not the violation of liscovs. even if we have consensous one way of doing it, there are always buncy of develoersp that will say, Nono, I know better.
+
+c we have problem in the real world labeling thing too. don't we
+
+r haha
+
+h yeah
+
+c we guess sort of hang up on that.
+
+r just getting into this battle of example simple enought to understand, is the one usually didn't need it and here is the principal of battle on it anyway.
+
+interesting. especially since we are getting into this rectangle square thing, we have class, many classes that been called "rectangle." or "rect". Guess what, you can all sides equal. you do not make another class to make 4 equal size.
+
+h it's kind of comes back to the oo talk we had preveiously, it's like we tried to add all of those thing in the real world into code, as you say, rectagle in code, if you make the same size width and hight, it will be square, we really need it specific class.
+
+c and if you do not need specific class, how silly would it be used? becuase it is so constraint.
+
+h I completely agree.
+
+c all right, shall we go into dependancy inversion principal? basically inversion of control we something we talked aobut manytime in the show, standard practice in software developers.
+
+h it's probably one of my favorite ones. it's i gues ninject, there are other contaiers. it's one of those first thing I put into most of my project, because it just make, things simpler, and I guess mosto f us figured out ioc containers and dependancy inverseion dependancy injhection are great way to building software and I mean really flexible and changeble.
+
+c r alright.
+
+h and it was hard to explain once a while because general one we get "it's awe some bcause it's abstruct the way my database and Idatabase interface, and put that into ise container, in the future, we replace out microsoft sql server for oracle, we can jsut make in that little classes, it just works. that happens very rarely.
+
+r yes, as matter at all.
+
+h then you start looking at the other thing, I actually built piece of software made a piece of software, which made it so obvious this is the way to go. little kiosk, for a application for a client in new zealand. and it a little kiosk put on a bar got a touch screen and camera and webcam, and coin of meck thing you can pay for things, printer, all of hardware things, I don't have access to, I don't have full rigged in home, but using htis I have, invversion of all of these, like drive flow of all tha hard ware things for their kiosk, then I can goin and put inthe other config, then all of the sudden I can have spoofed. all of that hardware and mocks aout of it. and I can save a deplywith it, make change iwth it other part of the software without needin all of the hardware. I canp ut all of the configuration, to external xml files, it means that when the client came back and say, we need another camera, couse camera stop prodicing the wyat we used to working with, I can sit here in stockholm, write the new implementation of icamera interface, with new camera, I can send down to them and say, jsut change htis config file. in your application convig fike, all the sudden you can use the new camera, they dont need to have different build, or different camera setup, jsut really easy for them to switch. And it wouldn't be possible for them like that without using DI.
+
+c
+I gotta tell you one of the best explanation of ioc and why those needed, was the odne 7 years ago dotnetlocs 362 with james covec. so if you really want to follow the logic from it's initial inception,
+
+check that show out. don't you agree, rechard?
+
+r yeah, that was the great show.
+it was 7 years ago , we talked about di alot. its almost seem like become a norm now now, I mean 7 years ago, that was pretty far out idea, making sustainable software is toralating these kind of changes just makies it natural, alwasy like that.
+
+c especially if you in any testing and moking.
+
+r is't that where it started? you know it started how it makes easier to test, then suddenly it's like hey this should make it really torelent to change
+
+h it's quite interesintsing how it slowly really making it into microsoft own stuff as well. so in mvc volted on, afterward of the service locater kind of fashion. and the it was it felt almost volted on, in web api as well now that asp dotnet 5, di is in the foundation. I got a little surprised when you got doing owen, when you have startup class, you can actually di into your interface your startup class which pretty much one of the first thing actually run in your application.
+
+c yeah
+
+r i think it just take time for them to get into, you know, in green field chances even in the microsoft.
+to make fundamental decision like, we gonna incooprate di. at the base level, the first mvc, that was 2007, 2008? even then that was relatively innovative in the space, so I can't blame on them. I am glad theyve incorporate them now, it 2015, finally it hits the base level.
+
+h I completely agree. but, once you go with real life, it adds whole bunch of complexity.
+
+r it does. you know that 's the truth.
+especially for someone who try to read the code through first the time, "why are we doing this?"
+
+c yeah also makes it like, i got this problem here I need to debug in like, well, actually I don't know if what's gonna be used in this impelemtnation until run time.
+
+r hahahaha
+
+h I can only figure out why doing it touch in my debugger then jumping through that
+also the fact I do believe I am not lying that, I don't think visual studio the way of taking interface then pressing f12, just jumping to the implemetation, just jump to the actual interface, whereas, I am using Reshaper, I just do control f12, it will figure out what classes I got in my solution.
+that actually implement that i nterface
+
+r right
+
+h because that one of things. Once you are start to jumpoing around your code, you ar using parts of the solid principal then 1500 different interfaces abstruction, its like feeling onion trying to figure out what is going wrong
+
+c right
+
+r and hopefully you have naming convention good enough, to toraleta all of that. you have some idea what you are looking at.
+
+h pretty much yeah.
+when it get complecated, it definately you get really hard what you are doing. I do believe htat complexity is out weigh the benefigt you get from it.
+but once again you need come back to pragmatic approch of how far do I take this. do I really need to add extra layer of abstruction. or can I suffice without doing it.
+it's things like that. it does get complecated, and I do believe, perfectly honest, in aspnet 5, with new stuff, ah, will be handful a lot of dotnet developer to get their head around, it's just so different from all of those stuff we had so far.
+
+c so tell me something, this is the new question I wanted start asking people. without naming names, what is the worst harsh show you ever seen, in terms of related to SOLID principle.
+
+h I haven't seen that much, Unfortunately i seen trying to follow this and that, it's been task of someone else who didn't get hands back , then completely, misunderstood di and interface, just screwed up. but I must say, from the horror story, the worst thing I've ever heard, I didn't see the actual code, but my clieent I kinda know, theyh ave constructor, with 700 lines
+
+r oh man
+
+c whhhaa
+
+h that's where you go...
+
+r how do we get here?
+
+h oh, it's actually built by someone else who I dont' think in the company anymore, but anything built by that person, you sort of goes, yeah, this is built by x and y so, it might be a bit complicated
+
+c was that by anytchanc cobol programmer?
+
+h I don't actually know it might been I dont' think so though
+
+c ok, just wondering
+
+h got something against cobol programmers?
+
+c no no no. just sort of non-object oriented, top down, you know, make a routine call, do everything, and ah, typical kinda
+
+h typical god class.
+generally they are not, at least not in the constructor.
+
+c yeah
+
+h contructor is hte worst place in my world to put, I try not put anything but really really simple, like, initialization of variables there.
+and then if I need to do, other stuff, that haven't initialize method whatever, just don't do in constructor because initializing you, as object, shouldn't take time.
+
+c if you think about it, someone who first leanring object oriented programming, what's the first thing they learn? constructors. so this guy obeviously, stoped there.
+
+r gahahahaha
+
+c hey, there is the place I can put my code, put it there.
+
+h hahaha
+
+my application is awesome, I just created one object I run the constactor, and I am done
+
+c all right, just created.
+
+hey chiris it's been greate haing you in the show
+
+h greate to be here awesome to talking with you guys
+
+c I will see you again in norway
+
+h probably, or, potentially, some where else in conference I traveled in the world, once again I am trying get conferences in u.s.
+
+c well, do that. well hook this up.
+
+see you next tuime dear listener.
